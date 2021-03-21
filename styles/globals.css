@@ -1,16 +1,173 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+html,body {
+	padding: 0;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+		Helvetica Neue, sans-serif;
 }
-
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
-
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
+}
+.screen {
+    background: url('https://www.mobygames.com/images/promo/original/fac92af5bc3f4f74bf3fb172693dcf59.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+}
+header .media-nav{
+    font-size: 2rem;
+    color: #8f97aa;
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    font-weight: 100;
+}
+header .media-nav .active{
+    font-weight: 700;
+    color: white;
+}
+header .settings{
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+header .settings .fa{
+    font-size: 2rem;
+    color: white;
+}
+header .settings .user{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+header .settings .time{
+    font-size: 2rem;
+    color: white;
+}
+.container{
+    max-width: 90%;
+    margin: 20px auto;
+}
+.game-nav{
+    display: flex;
+    margin-bottom: 25px;
+}
+.game-nav .game{
+    background: linear-gradient(60deg, rgba(16,25,37,1),rgba(0,0,1)50%, rgba(16,25,37,1)100%);
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 20%;
+    margin-right: 15px;
+    cursor: pointer;
+    border: 0px solid #576170;
+    color: white;
+}
+.game-nav .game:hover{
+    border: 2px solid #576170;
+}
+.game-nav .game.active{
+    overflow: visible;
+    width: 150px;
+    height: 150px;
+    border: 2px solid #576170;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.game-nav .game.active::after{
+    content: "Explore";
+    position: absolute;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 100;
+    bottom: 10px;
+    right: -100px;
+}
+.game-nav .game.active .fa{
+    font-size: 4rem;
+}
+.game-nav .game .img{
+    width: 100px;
+    height: 100px;
+}
+.info{
+    width: 50%;
+    margin-bottom: 3rem;
+}
+.info .subtitle{
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #8f97aa;
+}
+.info h1{
+    font-size: 3rem;
+    font-weight: 300;
+    color: white;
+}.info p{
+    font-size: 2rem;
+    font-weight: 300;
+    color: #8f97aa;
+}
+#video-trailers{
+    white-space: nowrap;
+    overflow-x: scroll;
+    padding-left: 5%;
+}
+#video-trailers .trailer{
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    width: 350px;
+    height: 200px;
+    background: linear-gradient(60deg, rgba(16,25,37,1),rgba(0,0,1)50%, rgba(16,25,37,1)100%);
+    margin-right: 20px;
+    opacity: 1;
+    cursor: pointer;
+}
+#video-trailers .trailer:hover img{
+    opacity: 1;
+}
+#video-trailers .trailer img{
+    transition: opacity .4s ease-in-out;
+    opacity: 0.5;
+    width: 350px;
+    height: 200px;
+    object-fit: cover;
+}
+#video-trailers .trailer .video-info{
+    position: absolute;
+    width: 100%;
+    bottom : 0;
+    color: white;
+    padding: 1rem;
+}
+#video-trailers .trailer .circle-player{
+    background: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+::-webkit-scrollbar {
+    display: none;
 }
